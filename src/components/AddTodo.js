@@ -3,13 +3,8 @@ import { connect } from 'react-redux';
 
 import { addTodo } from '../actions';
 
-const AddTodo = props => {
+const AddTodo = ({ onButtonClick }) => {
     let input;
-
-    const onButtonClick = (text) => {
-        props.addTodo(text)
-        input.value = '';
-    };
 
     return (
         <div className="ui action input">
@@ -21,5 +16,5 @@ const AddTodo = props => {
 
 export default connect(
     null,
-    { addTodo }
+    { onButtonClick: addTodo }
 )(AddTodo);
