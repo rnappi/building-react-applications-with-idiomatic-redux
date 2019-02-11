@@ -9,7 +9,7 @@ const AddTodo = ({ onButtonClick }) => {
     return (
         <div className="ui action input">
             <input ref={node => { input = node; }} />
-            <button className="ui button" onClick={() => onButtonClick(input.value)}>Add Todo</button>
+            <button className="ui button" onClick={() => { onButtonClick(input.value); input.value = ''; }}>Add Todo</button>
         </div >
     );
 };
