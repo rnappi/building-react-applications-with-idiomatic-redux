@@ -1,6 +1,5 @@
 import {
     ADD_TODO,
-    SET_VISIBILITY_FILTER,
     TOGGLE_TODO
 } from './types';
 
@@ -10,11 +9,6 @@ export const addTodo = text => ({
         id: new Date().getTime(),
         text
     }
-});
-
-export const setVisibilityFilter = filter => ({
-    type: SET_VISIBILITY_FILTER,
-    payload: filter
 });
 
 export const toggleTodo = id => ({
